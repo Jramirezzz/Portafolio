@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("./assets/Avenir-next-lt-pro/AvenirNextLTPro-Regular.otf");
+}
+
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0D0D0D;
+}
