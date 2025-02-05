@@ -11,7 +11,7 @@ function App() {
       <Banner title="Juan Esteban Ramirez Perdomo" 
               description="Soy un diseñador de interacción apasionado por crear experiencias digitales intuitivas y atractivas. Con experiencia en diseño UI/UX, desarrollo frontend y prototipado, mi enfoque se basa en comprender las necesidades del usuario y traducirlas en soluciones funcionales y estéticamente impactantes."  
               buttons="Ver Mas"
-              image="./Assets/Imagenes/Mia.png"
+              image="/Assets/Imagenes/Mia.png"
               />
               
       <h2 className="habilidades-title">Mis Habilidades</h2>
