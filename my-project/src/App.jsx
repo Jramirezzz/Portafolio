@@ -11,7 +11,7 @@ function App() {
       <Banner title="Juan Esteban Ramirez Perdomo" 
               description="Soy un diseñador de interacción apasionado por crear experiencias digitales intuitivas y atractivas. Con experiencia en diseño UI/UX, desarrollo frontend y prototipado, mi enfoque se basa en comprender las necesidades del usuario y traducirlas en soluciones funcionales y estéticamente impactantes."  
               buttons="Ver Mas"
-              image="../../src/assets/Imagenes/Mia.png"
+              image="/assets/Imagenes/Mia.png"
               />
               
       <h2 className="habilidades-title">Mis Habilidades</h2>
@@ -35,7 +35,7 @@ function App() {
 
       <CardsP title="API" 
               description="Este proyecto se centra en la integración de una API externa para proporcionar funcionalidades avanzadas y datos dinámicos en una aplicación web. La API permite la obtención de datos en tiempo real, lo que enriquece la experiencia del usuario al mostrar contenido actualizado de manera eficiente." 
-              link=""
+              link="https://gift-project-ten.vercel.app/"
               buttons="Ver Mas" />
 
       <CardsP title="Proyectos Grupales" 
