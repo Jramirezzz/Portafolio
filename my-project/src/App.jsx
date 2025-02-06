@@ -47,6 +47,20 @@ function App() {
     <div className="blurred-background">
     <div className="circle one"></div>
     <div className="circle three"></div>
+
+    <div className="social-networks">
+  <button onClick={() => (location.href = "https://github.com/Jramirezzz")}>
+    <img className="github" src="/Assets/Imagenes/github.png" alt="GitHub" />
+  </button>
+  <button onClick={() => (location.href = "https://www.behance.net/juanesramirez5")}>
+    <img className="behance" src="/Assets/Imagenes/behance.png" alt="Behance" />
+  </button>
+  <button onClick={() => (location.href = "https://www.linkedin.com/in/juanestebanrp/")}>
+    <img className="linkedin" src="/Assets/Imagenes/linkedin.png" alt="LinkedIn" />
+  </button>
+</div>
+
+
   </div>
     </>
   )

@@ -85,3 +85,28 @@
   top: 0%;
   left: 80%;
 }
+.social-networks {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+.social-networks button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.social-networks button img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-networks button:hover img {
+  transform: scale(1.2);
+}
