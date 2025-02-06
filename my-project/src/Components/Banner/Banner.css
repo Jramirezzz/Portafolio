@@ -1,4 +1,5 @@
 .banner-container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,8 +17,58 @@
     font-family: "Avenir Next";
     margin-bottom: 100px;
     margin-top: 100px;
+    overflow: hidden; /* Asegura que el punto se quede dentro de la card */
 }
 
+/* 🔥 El punto animado que recorre el borde */
+.banner-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;  /* Tamaño del punto */
+    height: 5px;
+    background-color: #FF5700; /* Color del punto */
+    border-radius: 50%;
+    animation: pointAnimation 10s linear infinite; /* Movimiento más lento (6s) */
+    z-index: 1; /* Aseguramos que el punto esté encima del contenido */
+    box-shadow: 0 0 10px 4px rgba(255, 87, 0, 0.6); /* Estela luminosa */
+}
+
+/* 🎥 Animación del punto recorriendo el borde */
+@keyframes pointAnimation {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: 100%;
+    }
+    50% {
+        top: 100%;
+        left: 100%;
+    }
+    75% {
+        top: 100%;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+/* 📌 Ajustar contenido para que no se vea afectado */
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* 📌 Imagen */
 .banner-image {
     width: 230px;  
     height: 230px; 
@@ -25,15 +76,9 @@
     border-radius: 50%;
     object-fit: cover; 
     margin-right: 100px;
-
 }
 
-.banner-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
+/* 📌 Texto */
 h1 {
     font-size: 2rem;
     margin-bottom: 10px;
@@ -43,22 +88,4 @@ p {
     font-size: 1.2rem;
     margin-bottom: 15px;
     color: white;
-}
-
-button {
-    background: rgba(43, 43, 43, 0.3);
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: #FF5700;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: rgba(255, 255, 255, 0.5);
 }

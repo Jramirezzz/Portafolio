@@ -49,7 +49,7 @@
     animation: floating 3s ease-in-out infinite;
   }
   .cardp-container button:hover {
-    background-color: #000000;
+    background-color: #2B2B2B;
   }
 
   .cardp-container h3 {
