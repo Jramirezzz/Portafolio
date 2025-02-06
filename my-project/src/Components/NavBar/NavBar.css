@@ -1,28 +1,65 @@
 .navbar {
-    display: flex;
-    justify-content: flex-start; 
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  padding: 20px;
+}
 
+/* Menú */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; 
+  padding: 0;
+  margin: 0;
+  margin-left: 18%;
+}
+
+/* Elementos del menú */
+.navbar li {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: rgb(22, 22, 22); 
+  color: #FF5700;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: "Avenir Next";
+}
+
+/* Hover para los elementos */
+.navbar li:hover {
+  background-color: rgba(255, 87, 0, 0.2);
+}
+
+/* 📱 Media query para pantallas medianas */
+@media screen and (max-width: 768px) {
+  .navbar {
+    justify-content: center; /* Centra la barra de navegación */
   }
-  
+
   .navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px; 
-    padding: 0;
-    margin: 0;
-    margin-left: 18%;
+    margin-left: 0;  /* Elimina el margen izquierdo */
+    gap: 15px; /* Reducimos el espacio entre los items */
   }
-  
+
   .navbar li {
-    padding: 10px 20px;
-    border-radius: 8px;
-    background-color: rgb(22, 22, 22); 
-    color: #FF5700;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    font-family: "Avenir Next";
+    padding: 8px 16px;  /* Reducimos el padding de los items */
+    font-size: 0.9rem;  /* Reducimos el tamaño de la fuente */
   }
-  
+}
+
+/* 📱 Media query para móviles */
+@media screen and (max-width: 480px) {
+  .navbar ul {
+    flex-direction: column;  /* Cambiamos a columna en móviles */
+    align-items: center;  /* Alineamos al centro */
+  }
+
+  .navbar li {
+    padding: 10px 20px;  /* Un poco más de padding para el toque táctil */
+    font-size: 1rem;  /* Aumentamos el tamaño del texto */
+    width: 100%;  /* Asegura que los botones ocupen el 100% del ancho */
+    text-align: center;  /* Alineamos el texto al centro */
+  }
+}

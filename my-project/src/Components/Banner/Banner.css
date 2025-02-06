@@ -1,10 +1,12 @@
+/* Contenedor principal con la animación del borde */
 .banner-container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: left;
-    width: 60%;
+    width: 80%;  /* Asegura que se ajuste al ancho de la pantalla */
+    max-width: 1000px; /* Limita el ancho máximo para pantallas grandes */
     padding: 2rem;
     border-radius: 20px;
     background: linear-gradient(135deg, rgba(111, 111, 111, 0.2), rgba(13, 13, 13, 0.2));
@@ -17,10 +19,10 @@
     font-family: "Avenir Next";
     margin-bottom: 100px;
     margin-top: 100px;
-    overflow: hidden; /* Asegura que el punto se quede dentro de la card */
+    overflow: hidden;
 }
 
-/* 🔥 El punto animado que recorre el borde */
+/* 🔥 Punto animado */
 .banner-container::after {
     content: "";
     position: absolute;
@@ -30,8 +32,8 @@
     height: 5px;
     background-color: #FF5700; /* Color del punto */
     border-radius: 50%;
-    animation: pointAnimation 10s linear infinite; /* Movimiento más lento (6s) */
-    z-index: 1; /* Aseguramos que el punto esté encima del contenido */
+    animation: pointAnimation 10s linear infinite;
+    z-index: 1;
     box-shadow: 0 0 10px 4px rgba(255, 87, 0, 0.6); /* Estela luminosa */
 }
 
@@ -59,33 +61,110 @@
     }
 }
 
-/* 📌 Ajustar contenido para que no se vea afectado */
+/* Contenido dentro del banner */
 .banner-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     z-index: 2;
+    text-align: center;  /* Centramos el texto */
 }
 
 /* 📌 Imagen */
 .banner-image {
-    width: 230px;  
-    height: 230px; 
-    width: 65%;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
-    object-fit: cover; 
+    object-fit: cover;
     margin-right: 100px;
 }
 
-/* 📌 Texto */
+/* 📌 Título */
 h1 {
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
+/* 📌 Descripción */
 p {
     font-size: 1.2rem;
     margin-bottom: 15px;
     color: white;
+}
+
+/* 📌 Botón */
+button {
+    background: rgba(43, 43, 43, 0.3);
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #FF5700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Media Queries para pantallas más pequeñas */
+
+/* 📱 Tablets y pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .banner-container {
+        flex-direction: column;  /* Apilamos los elementos */
+        padding: 1rem;
+        width: 90%;  /* Asegura que no ocupe todo el ancho */
+    }
+
+    .banner-image {
+        width: 150px;  /* Reduce el tamaño de la imagen */
+        height: 150px;
+        margin-right: 0;
+        margin-bottom: 20px;  /* Añadimos un margen inferior */
+    }
+
+    h1 {
+        font-size: 1.5rem;  /* Reducimos el tamaño del texto */
+    }
+
+    p {
+        font-size: 1rem;  /* Reducimos el tamaño del texto */
+    }
+
+    button {
+        width: 120px;  /* Reducimos el ancho del botón */
+        padding: 8px 15px;  /* Reducimos el padding */
+    }
+}
+
+/* 📱 Móviles */
+@media screen and (max-width: 480px) {
+    .banner-container {
+        width: 95%;  /* Un poco más pequeño en móviles */
+        padding: 1rem;
+    }
+
+    .banner-image {
+        width: 120px;  /* Reducimos aún más el tamaño de la imagen */
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.3rem;  /* Reducimos más el tamaño del título */
+    }
+
+    p {
+        font-size: 0.9rem;  /* Ajustamos el tamaño del texto */
+    }
+
+    button {
+        width: 100px;  /* Reducimos el botón */
+        padding: 8px 12px;  /* Reducimos el padding */
+    }
 }
